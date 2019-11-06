@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-      @workout = Workout.first
+      @workout = Workout.order("RANDOM()").first
   end
 
   def new
