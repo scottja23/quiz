@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-      @workout = Workout.order("RANDOM()").first
+      @workout = Workout.first
   end
 
   def new
@@ -8,13 +8,13 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    Workout.create(workout_params)
+    @workout = Workout.create(workout_params)
+    redirect_to root_path
   end
 
   private
 
   def workout_params
-    params.require(:workout).permit(:exercise, :set, :rep)
-    redirect_to root_path
+    params.require(:workout).permit(:exercise, :set_number, :rep_number)
   end
 end

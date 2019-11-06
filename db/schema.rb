@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_001507) do
+ActiveRecord::Schema.define(version: 2019_11_06_031905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_11_06_001507) do
     t.integer "rep"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "set_number"
+    t.string "rep_number"
   end
 
 end
