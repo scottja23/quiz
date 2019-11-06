@@ -1,0 +1,7 @@
+<h1>Enter Your Workout Details</h1>
+<%= simple_form_for @workout do |f| %>
+  <%= f.input :exercise %>
+  <%= f.input :set %>
+  <%= f.input :rep %>
+  <%= f.submit 'Create', class: 'btn btn-success' %>
+<% end %>
