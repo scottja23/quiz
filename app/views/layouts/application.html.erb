@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quiz</title>
+    <title>Splurty</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <header class="row">
+ 
+      <div class="col-6 offset-4">
+        Get fitness encouragement with this random workout generator
+      </div>
+    </header>
+
+    <br class="clear" />
+
+   <%= yield %>
+
   </body>
 </html>
